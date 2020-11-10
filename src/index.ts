@@ -1,4 +1,7 @@
 import * as winston from "winston";
+// import tests from './simpleMaths.test'
+
+// tests()
 
 const simpleLogger = winston.createLogger({
     level: "info",

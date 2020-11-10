@@ -20,6 +20,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var winston = __importStar(require("winston"));
+// import tests from './simpleMaths.test'
+// tests()
 var simpleLogger = winston.createLogger({
     level: "info",
     format: winston.format.simple(),
