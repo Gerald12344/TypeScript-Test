@@ -1,4 +1,6 @@
+import { getStringVertex } from "comp-sci-maths-lib/dist/common";
 import * as winston from "winston";
+import {depthFirstSearch, SimpleStringGraph } from 'comp-sci-maths-lib/dist'
 // import tests from './simpleMaths.test'
 
 // tests()
@@ -14,3 +16,14 @@ function sayHello(name: string): void {
 }
 
 sayHello('Mr Sharp')
+const myGraph = new SimpleStringGraph()
+myGraph.addLink("A","B")
+
+
+
+const dfs: string[] = []
+depthFirstSearch(myGraph,
+    getStringVertex('A'),
+    x => dfs.push(x.value));
+
+simpleLogger.info(dfs)

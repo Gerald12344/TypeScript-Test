@@ -27,7 +27,7 @@ test('Binary Tree in Order', () => {
     tree.add(1);
     tree.add(4);
     tree.add(90);
-    let inorderResults:number[] = []
+    const inorderResults:number[] = []
 
     InOrder(tree, x => inorderResults.push(x))
     expect(inorderResults).toEqual([1,2,4,5,7,8,90])

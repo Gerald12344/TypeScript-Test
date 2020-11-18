@@ -19,7 +19,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var common_1 = require("comp-sci-maths-lib/dist/common");
 var winston = __importStar(require("winston"));
+var dist_1 = require("comp-sci-maths-lib/dist");
 // import tests from './simpleMaths.test'
 // tests()
 var simpleLogger = winston.createLogger({
@@ -31,4 +33,9 @@ function sayHello(name) {
     simpleLogger.info("Hello " + name);
 }
 sayHello('Mr Sharp');
+var myGraph = new dist_1.SimpleStringGraph();
+myGraph.addLink("A", "B");
+var dfs = [];
+dist_1.depthFirstSearch(myGraph, common_1.getStringVertex('A'), function (x) { return dfs.push(x.value); });
+simpleLogger.info(dfs);
 //# sourceMappingURL=index.js.map
